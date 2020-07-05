@@ -17,7 +17,11 @@ public class SQLConnectionSingleton {
 	
 	public static SQLConnectionSingleton getInstance() {
 		if(instance == null) {
-			instance = new SQLConnectionSingleton();
+			synchronized (SQLConnectionSingleton.class) {
+				if(instance == null) {
+					instance = new SQLConnectionSingleton();
+				}				
+			}
 		}
 		return instance;
 	}
