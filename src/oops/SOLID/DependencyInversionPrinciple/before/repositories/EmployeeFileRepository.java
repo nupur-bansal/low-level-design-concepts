@@ -23,9 +23,9 @@ we are storing employees in the file system.
  */
 
 public class EmployeeFileRepository {
-    private EmployeeFileSerializer serializer;
+    private Serializer serializer;
 
-    public EmployeeFileRepository(EmployeeFileSerializer serializer) {
+    public EmployeeFileRepository(Serializer serializer) {
         this.serializer = serializer;
     }
 
